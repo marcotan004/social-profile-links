@@ -72,10 +72,12 @@ h3 {
     font-weight: var(--var-font-weight-bold);
 }
 
+nav {
+    width: 100%;
+}
 ul {
     list-style: none;
-    width: 100%;
-
+    
     & > * {
         margin-block-end: 1rem;
 
@@ -114,18 +116,17 @@ li {
 }
 
 .card {
+    
     background-color: var(--var-grey-800);
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem;
+    padding-inline: 1.5rem;
+    padding-block: 2.5rem;
     border-radius: 0.75rem;
-
-    & > * {
-        margin-block-end: 1.5rem;
-    }
+    gap: 1.5rem;
 }
 
 .info {
