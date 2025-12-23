@@ -12,7 +12,7 @@
     --var-text-preset-1-size: 1.5rem;
     --var-text-preset-2-size: 0.875rem;
     --var-text-preset-3-size: 0.875rem;
-    --var-font-weight-bold: 800;
+    --var-font-weight-bold: 700;
     --var-font-weight-regular: 400;
     --var-line-height: 1.5;
     --var-letter-spacing: 0;
@@ -40,27 +40,26 @@ body {
 }
 
 main {
-    max-width: 100%
+    max-width: 100%;
+    padding: 1.5rem;
 }
 
-.card {
-    background-color: var(--var-grey-800);
-    max-width: 23.3125rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2.5rem;
-    margin: 1.5rem;
-
-    & > * {
-        margin-block-end: 1.5rem;
-    }
+img {
+    height: 5.5rem;
+    border-radius: 50%
 }
 
 p {
     font-size: var(--var-text-preset-2-size);
     font-weight: var(--var-font-weight-regular);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 h2 {
@@ -73,8 +72,68 @@ h3 {
     font-weight: var(--var-font-weight-bold);
 }
 
+ul {
+    list-style: none;
+    width: 100%;
+
+    & > * {
+        margin-block-end: 1rem;
+
+        :hover, 
+        :active, 
+        :focus, 
+        :invalid {
+            cursor: pointer;
+            background-color: var(--var-green);
+            color: black;
+        }
+    }
+
+    :last-child {
+        margin: 0rem;   
+    }
+}
+
+li {
+    text-align: center;
+    background-color: var(--var-grey-700);
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+    font-weight: var(--var-font-weight-bold);
+    
+
+    a {
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+    }
+}
+
+.container {
+    max-width: 100%;
+    width: 24rem;
+}
+
+.card {
+    background-color: var(--var-grey-800);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+
+    & > * {
+        margin-block-end: 1.5rem;
+    }
+}
+
 .info {
     h3 {
         color: var(--var-green);
+    }
+
+    & > * {
+        margin-block-end: 0.25rem;
     }
 }
